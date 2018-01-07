@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0; }
+  body section {
+    font-family: Roboto, Helvetica, sans-serif;
+    color: chocolate;
+    width: 100%;
+    height: 100vh; }
+    body section .answer {
+      width: 100%;
+      height: 20%;
+      background-color: blue;
+      text-align: center;
+      font-size: 16pt;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    body section article {
+      width: 100%;
+      height: 80vh;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center; }
+      body section article .circle {
+        border-radius: 50%; }
+      body section article .circle.big {
+        background-color: blue;
+        width: 50vw;
+        height: 50vw; }
+        @media only screen and (orientation: landscape) {
+          body section article .circle.big {
+            width: 40vh;
+            height: 40vh; } }
+      body section article .circle.small {
+        background-color: chocolate;
+        width: 33vw;
+        height: 33vw; }
+        @media only screen and (orientation: landscape) {
+          body section article .circle.small {
+            width: 26vh;
+            height: 26vh; } }
+
+/*# sourceMappingURL=mobile.css.map */

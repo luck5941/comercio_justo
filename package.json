@@ -1,0 +1,30 @@
+{
+  "name": "comercio_justo",
+  "version": "1.0.0",
+  "description": "Una aplicación que trata de ofrecer una forma de entender y aprender sobre el comercio justo de una forma diferente",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	 "init": "nodejs index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/luck59_41/comercio_justo.git"
+  },
+  "keywords": [
+    "nodejs",
+    "server",
+    "socket.io",
+    "comercio_justo",
+    "multiplataforma",
+    "arduino",
+    "photon"
+  ],
+  "author": "lucaselvira96@gmail.com",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/luck59_41/comercio_justo#readme",
+  "dependencies": {
+    "socket-io": "^1.0.0",
+    "socket.io": "^2.0.4"
+  }
+}

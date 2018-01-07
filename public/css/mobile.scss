@@ -1,0 +1,56 @@
+$font: Roboto, Helvetica, sans-serif;
+$color1: chocolate;
+$color2: blue;
+body {
+	margin: 0;
+	padding: 0;
+	section {
+		font-family: $font;
+		color: $color1;
+		width: 100%;
+		height: 100vh;
+		.answer {
+			width: 100%;
+			height: 20%;
+			background-color: $color2;
+			text-align: center;
+			font-size: 16pt;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		article {
+			width: 100%;
+			height: 80vh;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			svg {
+				
+			}
+			/*.circle {
+				border-radius: 50%;
+			}
+			.circle.big {
+				background-color: $color2;
+				width: 50vw;
+				height: 50vw;
+				@media only screen and (orientation: landscape) {
+					width: 40vh;
+					height: 40vh;
+				}
+			}
+			.circle.small {
+				background-color: $color1;
+				width: 33vw;
+				height: 33vw;
+				@media only screen and (orientation: landscape) {
+					width: 26vh;
+					height: 26vh;
+				}
+			}*/
+
+		}
+	}
+}
