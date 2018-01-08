@@ -4,6 +4,7 @@ $color2: blue;
 body {
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 	section {
 		font-family: $font;
 		color: $color1;
@@ -26,30 +27,15 @@ body {
 			flex-wrap: nowrap;
 			justify-content: center;
 			align-items: center;
-			svg {
-				
-			}
-			/*.circle {
-				border-radius: 50%;
-			}
-			.circle.big {
-				background-color: $color2;
-				width: 50vw;
-				height: 50vw;
-				@media only screen and (orientation: landscape) {
-					width: 40vh;
-					height: 40vh;
+			svg {				
+				width: 100%;
+				@media only screen and (orientation: landscape){
+					width: 75vh;
 				}
 			}
-			.circle.small {
-				background-color: $color1;
-				width: 33vw;
-				height: 33vw;
-				@media only screen and (orientation: landscape) {
-					width: 26vh;
-					height: 26vh;
-				}
-			}*/
+			svg.hidden{
+				display: none;
+			}
 
 		}
 	}

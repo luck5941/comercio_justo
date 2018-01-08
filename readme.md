@@ -20,6 +20,7 @@ Por tanto se necesita, hasta este momento (a nivel de software)
  
  1. *Creacion del proyecto con nodeJS*
  2. *Creacion del servidor (o importacion del mismo)*
+ 4. 
  3. Comunicacion entre ambos clientes
  4. Comunicacion con la API de photon
  5. Desarrollo de la aplicacion para
@@ -32,5 +33,16 @@ Por tanto se necesita, hasta este momento (a nivel de software)
 		3. Photon (cableado)
  
  
+ 
+ ## Diseño de la aplicacion
+Inicialmente aparecen 16 preguntas, que se iran descartando segun lo que haya preguntado el usuario previamente
+ 
+Cada producto tiene un array asociado con cada tag o etiqueta
+
+Cada pregunta tiene asociado un array con todos los productos que pueden cumplir la condicion que establezca la pregunta
+
+Al responder, se añade la etiqueta a una lista y se descartan todos los productos que no tengan esta etiqueta y todas las preguntas que no tengan asociado un producto posible.
+
+
 
 

@@ -3,9 +3,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Comercio Justo</title>
 	<link rel="stylesheet" href="css/mobile.css">
+	<link rel="manifest" href="manifest.json">
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
 </head>
 
 <body>
@@ -13,14 +15,16 @@
 		<h2 hidden="true">Concurso comercio Justo</h2>
 		<div class="answer">Aqui ira tu pregunta</div>
 		<article>
-			<svg viewBox="0 0 100 100">
-				<circle cx="50" cy="50" r="50"></circle>
-				<circle cx="50" cy="50" r="35"></circle>
+			<button>Start</button>
+			<svg viewBox="0 0 100 100" class="hidden">
+				<circle cx="50" cy="50" r="35" fill="#00FFF0" />
+				<circle cx="50" cy="50" r="15" fill="#8F0089" class="circle" />
 			</svg>
-
 		</article>
 	</section>
 	<script src="/socket.io/socket.io.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
+
 </html>
+

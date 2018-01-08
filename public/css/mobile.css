@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow: hidden; }
   body section {
     font-family: Roboto, Helvetica, sans-serif;
     color: chocolate;
@@ -22,23 +23,12 @@ body {
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center; }
-      body section article .circle {
-        border-radius: 50%; }
-      body section article .circle.big {
-        background-color: blue;
-        width: 50vw;
-        height: 50vw; }
+      body section article svg {
+        width: 100%; }
         @media only screen and (orientation: landscape) {
-          body section article .circle.big {
-            width: 40vh;
-            height: 40vh; } }
-      body section article .circle.small {
-        background-color: chocolate;
-        width: 33vw;
-        height: 33vw; }
-        @media only screen and (orientation: landscape) {
-          body section article .circle.small {
-            width: 26vh;
-            height: 26vh; } }
+          body section article svg {
+            width: 75vh; } }
+      body section article svg.hidden {
+        display: none; }
 
 /*# sourceMappingURL=mobile.css.map */

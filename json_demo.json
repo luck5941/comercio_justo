@@ -1,0 +1,10 @@
+{
+	pregunta1: {
+		"text": "¿Que te puedo preguntar?",
+		prod_posibles: ['prod1','prod2','prod3','prod3' ]
+	},
+	pregunta2: {
+		"text": "¿Que te puedo preguntar?",
+		prod_posibles: ['prod1','prod2','prod3','prod3' ]
+	}
+}
