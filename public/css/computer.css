@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Roboto, Helvetica, sans-serif; }
+  body #circle_cursor {
+    width: 25px;
+    height: 25px;
+    background-color: purple;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 3; }
+  body section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    body section .question {
+      flex-grow: 1;
+      width: 20%;
+      background: lightgray; }
+    body section .question.hover {
+      color: white; }
+
+/*# sourceMappingURL=computer.css.map */
