@@ -1,13 +1,10 @@
 'use strict';
 
-var circle, moveCircle, socket, win_x, win_y, fullScreenFunction;
+var circle, moveCircle, socket, win_x, win_y, fullScreenFunction, moveJostick, touchendFunction,selectQuestion;
 win_x = parseInt(innerWidth);
 win_y = parseInt(innerHeight);
 circle = $('.circle');
 socket = io('http://192.168.1.9:8080');
-
-
-
 
 socket.on('news', function (data) {
 	console.log(data);
@@ -31,7 +28,9 @@ moveCircle = (obj)=> {
 	});
 };
 
-
+touchendFunction = (e) => {
+	socket.emit('cancel', true);
+};
 
 fullScreenFunction = () => {
 	console.log("changeScreen");
@@ -50,28 +49,22 @@ fullScreenFunction = () => {
 	}
 };
 
-
-$('body').on('touchstart, touchmove', function (e) {
+moveJostick = (e) => {
 	var right, top, x, y;
 	x = e.originalEvent.touches[0].pageX;
 	y = e.originalEvent.touches[0].pageY;
 	right = x > win_x / 2;
 	top = y > win_y / 2;
-	socket.emit('dir', {
-		x: right,
-		y: top
-	});
-	moveCircle({
-		x: right,
-		y: top
-	});
-	return null;
-});
+	socket.emit('dir', {x: right, y: top});
+	moveCircle({x: right,y: top});
+};
+
+selectQuestion = () => {
+	socket.emit()
+}
+
+$('body').on('touchstart, touchmove', moveJostick);
 
 $('button').on('click, touchstart', fullScreenFunction);
 
-
-
-
-
-
+$('circle').on('touchstart', selectQuestion)

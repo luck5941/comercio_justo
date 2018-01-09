@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	 "init": "nodejs index.js"
+    "init": "nodejs index.js",
+    "build": "sass public/css/mobile.scss public/css/mobile2.css && sass public/css/computer.scss public/css/computer.css"
   },
   "repository": {
     "type": "git",
