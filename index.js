@@ -37,7 +37,6 @@ function server(req, res) {
 			});
 		} catch (e) {
 			console.log("El error ha sido: ")
-			//console.log(e)
 			console.log(`Se esta pidiendo: ${req.url} pero da error`)
 		}
 		res.end(data);
@@ -50,12 +49,20 @@ io.on('connection', function (socket) {
 	console.log("nueva conexion?");
 	socket.emit('news', {hello: 'world'});
 	socket.on('qr', function (d) {
-		console.log(d);
 		socket.broadcast.emit('qr', d);
 	});
 
 	socket.on('dir', function (d) {
 		socket.broadcast.emit('cords', d);
 	});
-	
+
+	socket.on('cancel', function(d){
+		socket.broadcast.emit('cancel', d)
+	});
+
+	socket.on('is-select', function(d){
+		socket.broadcast.emit('is-select', d)
+
+	});
+
 });

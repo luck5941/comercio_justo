@@ -22,19 +22,15 @@ moveCircle = (obj)=> {
 	var x, y;
 	x = obj.x ? 65 : 35;
 	y = obj.y ? 65 : 35;
-	return circle.attr({
-		cx: x,
-		cy: y
-	});
+	return circle.attr({cx: x,cy: y});
 };
 
 touchendFunction = (e) => {
 	socket.emit('cancel', true);
+	return circle.attr({cx: 50,cy: 50});
 };
 
 fullScreenFunction = () => {
-	console.log("changeScreen");
-	socket.emit('qr', {"pass": true});
 	$('button').remove();
 	$('svg').removeAttr('class');
 	var i = document.getElementsByTagName("body")[0];
@@ -60,11 +56,11 @@ moveJostick = (e) => {
 };
 
 selectQuestion = () => {
-	socket.emit()
+	socket.emit('is-select', true);
 }
 
-$('body').on('touchstart, touchmove', moveJostick);
+$('body').on('touchstart, touchmove', moveJostick).on('touchend', touchendFunction);
 
 $('button').on('click, touchstart', fullScreenFunction);
 
-$('circle').on('touchstart', selectQuestion)
+$('circle').on('touchstart', selectQuestion);
