@@ -1,0 +1,18 @@
+{
+  "questions": {
+    "pregunta1": {
+      "text": "pregunta1",
+        "products": ["prod1", "prod2", "prod5" ],
+    },
+    "pregunta2": {
+      "text": "pregunta2",
+        "products": ["prod4", "prod7", "prod9" ],
+        "tag": "item4"
+    },
+    "pregunta3": {
+      "text": "pregunta2",
+        "products": ["prod3", "prod6", "prod8" ],
+        "tag": "item3"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{"questions":{
+
+	"pregunta1":{
+		"text": "¿Necesitas cuidar tu cabello?",
+			"products": ["Acondicionador (pelo liso)", "Champu Aloe Vera cabello normal"],
+			"tag": ["cuidado","cabello","desenredar","brillo","volumen","suavidad","aceite de argan","aceite de jojoba","cuidado","cabello","hidratante","cabello sano","cabello brillante","cabello elastico","cabello flexible","respeta medio ambiente"]
+	},
+
+	"pregunta2":{
+		"text": "¿Necesitas hidratación?",
+			"products": ["Champu Aloe Vera cabello normal", "Aceite puro de argan", "Aceite puro de moringa", "Aceite de Baobab para masajes"],
+			"tag": ["cuidado", "cabello", "hidratante", "cabello sano", "cabello brillante", "cabello elastico", "cabello flexible", "respeta medio ambiente", "reparacion", "calmante", "antiinflamatorio", "hidratante", "antiséptico", "fungicida", "cicatrizante", "quemaduras", "alteraciones de la piel", "dolor articular","cuidado", "natural", "antioxidantes", "hidratante", "elasticidad"]
+	},
+
+	"pregunta3":{
+		"text": "¿Buscas productos con bases de aceite?",
+			"products": ["Acondicionador (pelo liso)", "Aceite formato roll-on de rosa mosqueta", "Aceite puro de argan", "Crema facial antiacne de arbol de te", "Contorno ojos antiarrugas", "Jabon natural de coco"],
+			"tag": ["cuidado", "cabello", "desenredar", "brillo", "volumen", "suavidad", "aceite de argan", "aceite de jojoba","reparacion", "cicatrices", "quemaduras solares", "manchas", "arrugas", "estrias","reparacion", "calmante", "antiinflamatorio", "hidratante", "antiséptico", "fungicida", "cicatrizante", "quemaduras", "alteraciones de la piel", "dolor articular","prevencion", "acne", "arbol de te", "aceite de jojoba", "zarzaparilla", "cuidado", "aceite de argan", "colageno hidrolizado", "antiarrugas","cuidado", "natural", "cuida medio ambiente", "aceite de palma", "aceite de coco", "cera de arroz"]
+	},
+
+	"pregunta4":{
+		"text": "¿Sirve para el sol?",
+			"products": ["crema solar SPF 50", "Aceite formato roll-on de rosa mosqueta", "Aceite puro de argan"],
+			"tag": ["prevención", "protege piel", "respeta medio ambiente", "spray", "filtros fisicos","reparacion", "cicatrices", "quemaduras solares", "manchas", "arrugas", "estrias","reparacion", "calmante", "antiinflamatorio", "hidratante", "antiséptico", "fungicida", "cicatrizante", "quemaduras", "alteraciones de la piel", "dolor articular"]
+	},
+
+	"pregunta5":{
+		"text": "¿Cuida la piel?",
+			"products": ["Aceite formato roll-on de rosa mosqueta", "Aceite puro de argan", "Crema facial antiacne de arbol de te", "crema solar SPF 50", "Contorno ojos antiarrugas", "Jabon natural de coco", "Crema facial de dia de Karite", "Aceite puro de moringa", "Desodorante hombre Aloe Vera", "Aceite de Baobab para masajes"],
+			"tag": ["reparacion", "cicatrices", "quemaduras solares", "manchas", "arrugas", "estrias", "reparacion", "calmante", "antiinflamatorio", "hidratante", "antiséptico", "fungicida", "cicatrizante", "quemaduras", "alteraciones de la piel", "dolor articular", "prevencion", "acne", "arbol de te", "aceite de jojoba", "zarzaparilla","prevención", "protege piel", "respeta medio ambiente", "spray", "filtros fisicos", "cuidado", "aceite de argan", "colageno hidrolizado", "antiarrugas", "cuidado", "natural", "cuida medio ambiente", "aceite de palma", "aceite de coco", "cera de arroz", "cuidado", "pieles secas", "pieles muy secas", "manteca de karite", "piel suave", "piel nutrida","cuidado", "antienvejecimiento", "antioxidante", "antiinflamatorio", "antiséptico", "hidratante", "piel nutrida","cuidado", "natural", "aloe vera", "extracto de salvia","cuidado", "natural", "antioxidantes", "hidratante", "elasticidad"]
+
+	},
+
+	"pregunta6":{
+		"text": "Sirve como antiséptico",
+			"products": ["Aceite puro de argan", "Aceite puro de moringa"],
+			"tag": ["reparacion", "calmante", "antiinflamatorio", "hidratante", "antiséptico", "fungicida", "cicatrizante", "quemaduras", "alteraciones de la piel", "dolor articular", "cuidado", "antienvejecimiento", "antioxidante", "antiinflamatorio", "antiséptico", "hidratante", "piel nutrida"]
+	},
+
+	"pregunta7":{
+		"text": "Contiene extracto de salvia",
+			"products": ["Desodorante hombre Aloe Vera"],
+			"tag": ["cuidado", "natural", "aloe vera", "extracto de salvia"]
+	},
+
+	"pregunta8":{
+		"text": "Fabricado con materias naturales",
+			"products": ["Jabon natural de coco", "Desodorante hombre Aloe Vera", "Aceite de Baobab para masajes"],
+			"tag": ["cuidado", "natural", "cuida medio ambiente", "aceite de palma", "aceite de coco", "cera de arroz","cuidado", "natural", "aloe vera", "extracto de salvia","cuidado", "natural", "antioxidantes", "hidratante", "elasticidad"]
+	},
+
+	"pregunta9":{
+		"text": "Ideal para pieles muy secas",
+			"products": ["Crema facial de dia de Karite"],
+			"tag": ["cuidado", "pieles secas", "pieles muy secas", "manteca de karite", "piel suave", "piel nutrida"]
+	},
+
+	"pregunta10":{
+		"text": "Se aplica en el rostro especificamente",
+			"products": ["Crema facial antiacne de arbol de te", "Contorno ojos antiarrugas"],
+			"tag": ["prevencion", "acne", "arbol de te", "aceite de jojoba", "zarzaparilla", "cuidado", "aceite de argan", "colageno hidrolizado", "antiarrugas"]
+	},
+
+	"pregunta11":{
+		"text": "Combate las arrugas",
+			"products": ["Aceite puro de moringa", "Aceite de Baobab para masajes", "Contorno ojos antiarrugas"],
+			"tag": ["cuidado", "antienvejecimiento", "antioxidante", "antiinflamatorio", "antiséptico", "hidratante", "piel nutrida", "cuidado", "natural", "antioxidantes", "hidratante", "elasticidad","cuidado", "aceite de argan", "colageno hidrolizado", "antiarrugas"]
+	},
+
+	"pregunta12":{
+		"text": "Proviene de una grasa vegetal",
+			"products": ["Crema facial de dia de Karite"],
+			"tag": ["cuidado", "pieles secas", "pieles muy secas", "manteca de karite", "piel suave", "piel nutrida"]
+	},
+
+	"pregunta13":{
+		"text": "¿Hidrata el cabello?",
+			"products": ["Champu Aloe Vera cabello normal"],
+			"tag": ["cuidado", "cabello", "hidratante", "cabello sano", "cabello brillante", "cabello elastico", "cabello flexible", "respeta medio ambiente"]
+	},
+
+	"pregunta14":{
+		"text": "Sirve para desenredar",
+			"products": ["Acondicionador (pelo liso)"],
+			"tag": ["cuidado", "cabello", "desenredar", "brillo", "volumen", "suavidad", "aceite de argan", "aceite de jojoba"]
+	},
+
+	"pregunta15":{
+		"text": "No contiene filtros físicos",
+			"products": ["crema solar SPF 50"],
+			"tag": ["prevención", "protege piel", "respeta medio ambiente", "spray", "filtros fisicos"]
+	},
+
+	"pregunta16":{
+			"text": "Respeta el medio ambiente",
+			"products": ["crema solar SPF 50", "Champu Aloe Vera cabello normal", "Jabon natural de coco"],
+			"tag": ["prevención", "protege piel", "respeta medio ambiente", "spray", "filtros fisicos","cuidado", "cabello", "hidratante", "cabello sano", "cabello brillante", "cabello elastico", "cabello flexible", "respeta medio ambiente","cuidado", "natural", "cuida medio ambiente", "aceite de palma", "aceite de coco", "cera de arroz"]
+	}
+}
+,
+"products": {
+	"Aceite de rosa mosqueta": ["reparacion", "cicatrices", "quemaduras solares", "manchas", "arrugas", "estrias"],
+	"Aceite puro de argan:": ["reparacion", "calmante", "antiinflamatorio", "hidratante", "antiséptico", "fungicida", "cicatrizante", "quemaduras", "alteraciones de la piel", "dolor articular"],
+	"Crema facial antiacne de arbol de te": ["prevencion", "acne", "arbol de te", "aceite de jojoba", "zarzaparilla"],
+	"Crema solar SPF 50": ["prevención", "protege piel", "respeta medio ambiente", "spray", "filtros fisicos"],
+	"Contorno ojos antiarrugas": ["cuidado", "aceite de argan", "colageno hidrolizado", "antiarrugas"],
+	"Champu Aloe Vera cabello normal": ["cuidado", "cabello", "hidratante", "cabello sano", "cabello brillante", "cabello elastico", "cabello flexible", "respeta medio ambiente"],
+	"Jabon natural de coco:":["cuidado", "natural", "cuida medio ambiente", "aceite de palma", "aceite de coco", "cera de arroz"],
+	"Crema facial de día de Karite": ["cuidado", "pieles secas", "pieles muy secas", "manteca de karite", "piel suave", "piel nutrida"],
+	"Aceite puro de moringa":["cuidado", "antienvejecimiento", "antioxidante", "antiinflamatorio", "antiséptico", "hidratante", "piel nutrida"],
+	"Desodorante hombre Aloe Vera": ["cuidado", "natural", "aloe vera", "extracto de salvia"],
+	"Acondicionador (pelo liso)": ["cuidado", "cabello", "desenredar", "brillo", "volumen", "suavidad", "aceite de argan", "aceite de jojoba"],
+	"Aceite de Baobab para masajes": ["cuidado", "natural", "antioxidantes", "hidratante", "elasticidad"]
+}
+}

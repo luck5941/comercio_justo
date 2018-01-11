@@ -2,3 +2,4 @@
 /.sass-cache
 /package-lock.json
 /public/css/mobile.css.map
+/doc/*

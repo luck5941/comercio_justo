@@ -41,8 +41,12 @@ cancelFunction = (e) => {
 	canMove = false;
 };
 
+sendQuestion = (e) => {
+	concurso.response(selectedQuestion);
+}
+
 socket.on('cords', moveCursor);
 socket.on('cancel', moveCursor);
-socket.on('is-select', sendQuestion)
+socket.on('is-select', sendQuestion);
 circle.css('left', `${w / 2}px`);
 circle.css('top', `${h / 2}px`);

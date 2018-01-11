@@ -7,6 +7,7 @@ const contenthead = {
 	"css": "text/css",
 	"html": "text/html",
 	"js": "text/javascript",
+	"json": "application/json",
 	"png": "image/png",
 	"jpg": "image/jpeg",
 	"ico": "image/ico",
