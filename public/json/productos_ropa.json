@@ -3,11 +3,11 @@
 	"pregunta1":{
 		"text": "¿Es de manga corta?",
 			"products": ["Camiseta 1", "Camiseta 2", "Camiseta 3", "Camiseta 4"],
-			"tag": ["cuidado","cabello","desenredar","brillo","volumen","suavidad","aceite de argan","aceite de jojoba","cuidado cabello","hidratante","cabello sano","cabello brillante","cabello elastico","cabello flexible","respeta medio ambiente"]
+			"tag": ["COLOR NEGRO", "COLOR NARANJA", "COLOR ORCURO", "MANGAS CORTAS", "COLOR CÁLIDO", "ALGODÓN", "COLOR BLANCO", "FIGURA GEOMÉTRICA", "VUELA EN LA REALIDAD", "OBJETOS GEOMÉTRICOS", "LOS COLORES", "CÍRCULOS", "CIRCULAR", "ORGÁNICO", "TEXTO", "MUCHO CONTRASTE", "DIBUJO MÁS", "MANGA CORTA", "COLORES BLANCO Y NEGRO", "COLOR", "CUADRADO", "COLOR VERDE", "CAMISETA", "DIFERENTE", "AVION", "COLOR OSCURO", "COLOR MARRÓN", "DIBUJOS", "ILUSTRACIONES", "CLARO", "COLOR CLARO", "COLOR GRIS", "VARIOS COLORES", "ORGÁNICA", "GRIS", "NEGRO", "ESPIRAL", "MUCHOS COLORES"]
 	},
 
 	"pregunta2":{
-		"text": "¿Necesitas hidratación?",
+		"text": "¿Tiene ilustraciones?",
 			"products": ["Champu Aloe Vera cabello normal", "Aceite puro de argan", "Aceite puro de moringa", "Aceite de Baobab para masajes"],
 			"tag": ["cuidado", "cabello", "hidratante", "cabello sano", "cabello brillante", "cabello elastico", "cabello flexible", "respeta medio ambiente", "reparacion", "calmante", "antiinflamatorio", "hidratante", "antiséptico", "fungicida", "cicatrizante", "quemaduras", "alteraciones de la piel", "dolor articular","cuidado", "natural", "antioxidantes", "hidratante", "elasticidad"]
 	},
