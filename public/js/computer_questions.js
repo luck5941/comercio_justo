@@ -77,7 +77,7 @@ class Concurso {
 
 }
 
-$.get('json/productos.json', function(d){
+$.get('json/#{json}.json', function(d){
 	console.log(d);
 	window.concurso = new Concurso(d.questions, d.products);
 }).fail(function (e) {

@@ -21,10 +21,26 @@ const contenthead = {
 }
 
 function server(req, res) {
-	var path;
+	var path, toReplace = 'algo es algo...', match = '';
+
 	path = __dirname + '/public';
-	path += (req.url === '/') ? '/index.html' : (req.url.split('.').length === 2) ? req.url : req.url + '.html'
-	fs.readFile(path, function (err, data) {
+	path += (req.url === '/') ? '/index.html' : (req.url.split('.').length === 2) ? req.url : req.url + '.html';
+	if (path.search(/computer\d?\.[html]/) !== -1){
+		console.log("entra con el html porque path vale "+ path);
+		if (path.search(/\d\./) !== -1) {
+			toReplace = 'computer_questions2';
+			path = path.replace(/\d\./, '.');
+		}
+		else toReplace = 'computer_questions';
+	} else if (path.search('_questions') !== -1){
+		if (path.search(/\d\./) !== -1) {
+			toReplace = 'productos_ropa';
+			path = path.replace(/\d\./, '.');
+		}
+		else toReplace = 'productos_cosmetica';
+	}
+
+	fs.readFile(path, 'utf8', function (err, data) {
 		if (err) {
 			console.log(`Se esta pidiendo: ${req.url}`)
 			res.writeHead(500, {
@@ -40,6 +56,10 @@ function server(req, res) {
 			console.log("El error ha sido: ")
 			console.log(`Se esta pidiendo: ${req.url} pero da error`)
 		}
+
+		if(typeof data == 'string')
+			data = data.replace(/[#][{]\w*[}]/, toReplace);
+		else console.log("no lo intentes con "+ path)
 		res.end(data);
 	});
 }
@@ -65,5 +85,4 @@ io.on('connection', function (socket) {
 		socket.broadcast.emit('is-select', d)
 
 	});
-
 });
