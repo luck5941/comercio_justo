@@ -19,6 +19,8 @@ body {
       flex-grow: 1;
       width: 20%;
       background: lightgray; }
+    body section .question:nth-child(2n) {
+      background-color: blue; }
     body section .question.hover {
       color: white; }
 

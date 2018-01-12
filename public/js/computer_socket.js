@@ -1,5 +1,4 @@
 //variables iniciales
-
 var circle, lupa, socket, w, h, moveCursor, stopMove, canMove, questionsCords, questions, comparePos, selectedQuestion,questions_height, questions_width, questions_left;
 
 socket = io('192.168.1.9:8080');
@@ -8,9 +7,10 @@ questions = $('.question');
 w = innerWidth;
 h = innerHeight;
 canMove = false;
-questions_height = parseInt(questions.css('height'));
+questions_height = parseFloat(questions.css('height'));
 questions_width =  parseInt(questions.css('width'));
 questions_left = parseInt(questions.offset().left);
+questions_top = parseInt(questions.offset().top);
 
 function sleep(ms) {return new Promise(resolve => setTimeout, ms);};
 async function moveCursor (d){
@@ -31,10 +31,16 @@ async function moveCursor (d){
 };
 
 comparePos = (y) => {
-		let selectedQuestion;
-		selectedQuestion = parseInt(y/questions_height);
-		$(questions).css('color', 'black');
-		return $(questions[selectedQuestion]).css('color', 'white');
+		let ind;
+		ind = parseInt(y/questions_height);
+		for (selectedQuestion = ind-2; selectedQuestion<=ind+2;selectedQuestion++){
+			if (selectedQuestion <0) selectedQuestion = 0;
+			if ($(window.questions[selectedQuestion]).offset().top < y &&  $(window.questions[selectedQuestion]).offset().top + questions_height > y){
+				break;
+			}
+		}
+		$(window.questions).css('color', 'black');
+		return $(window.questions[selectedQuestion]).css('color', 'white');
 };
 
 cancelFunction = (e) => {
@@ -42,7 +48,8 @@ cancelFunction = (e) => {
 };
 
 sendQuestion = (e) => {
-	concurso.response(selectedQuestion);
+	let att = $(questions[selectedQuestion]).attr("attr");
+	concurso.response(att);
 }
 
 socket.on('cords', moveCursor);

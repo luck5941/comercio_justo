@@ -47,8 +47,8 @@ fullScreenFunction = () => {
 
 moveJostick = (e) => {
 	var right, top, x, y;
-	x = e.originalEvent.touches[0].pageX;
-	y = e.originalEvent.touches[0].pageY;
+	x = e.originalEvent.touches[0].pageX /*e.originalEvent.clientX*/;
+	y = e.originalEvent.touches[0].pageY /*e.originalEvent.clientY*/;
 	right = x > win_x / 2;
 	top = y > win_y / 2;
 	socket.emit('dir', {x: right, y: top});
@@ -61,6 +61,6 @@ selectQuestion = () => {
 
 $('body').on('touchstart, touchmove', moveJostick).on('touchend', touchendFunction);
 
-$('button').on('click, touchstart', fullScreenFunction);
+$('button').on('touchstart', fullScreenFunction);
 
 $('circle').on('touchstart', selectQuestion);

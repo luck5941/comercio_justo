@@ -3,7 +3,7 @@
 	"pregunta1":{
 		"text": "¿Necesitas cuidar tu cabello?",
 			"products": ["Acondicionador (pelo liso)", "Champu Aloe Vera cabello normal"],
-			"tag": ["cuidado","cabello","desenredar","brillo","volumen","suavidad","aceite de argan","aceite de jojoba","cuidado","cabello","hidratante","cabello sano","cabello brillante","cabello elastico","cabello flexible","respeta medio ambiente"]
+			"tag": ["cuidado","cabello","desenredar","brillo","volumen","suavidad","aceite de argan","aceite de jojoba","cuidado cabello","hidratante","cabello sano","cabello brillante","cabello elastico","cabello flexible","respeta medio ambiente"]
 	},
 
 	"pregunta2":{
@@ -15,13 +15,13 @@
 	"pregunta3":{
 		"text": "¿Buscas productos con bases de aceite?",
 			"products": ["Acondicionador (pelo liso)", "Aceite formato roll-on de rosa mosqueta", "Aceite puro de argan", "Crema facial antiacne de arbol de te", "Contorno ojos antiarrugas", "Jabon natural de coco"],
-			"tag": ["cuidado", "cabello", "desenredar", "brillo", "volumen", "suavidad", "aceite de argan", "aceite de jojoba","reparacion", "cicatrices", "quemaduras solares", "manchas", "arrugas", "estrias","reparacion", "calmante", "antiinflamatorio", "hidratante", "antiséptico", "fungicida", "cicatrizante", "quemaduras", "alteraciones de la piel", "dolor articular","prevencion", "acne", "arbol de te", "aceite de jojoba", "zarzaparilla", "cuidado", "aceite de argan", "colageno hidrolizado", "antiarrugas","cuidado", "natural", "cuida medio ambiente", "aceite de palma", "aceite de coco", "cera de arroz"]
+			"tag": ["cuidado", "cabello", "desenredar", "brillo", "volumen", "suavidad", "aceite de argan", "aceite de jojoba", "cicatrices", "quemaduras solares", "manchas", "arrugas", "estrias","reparacion", "calmante", "antiinflamatorio", "hidratante", "antiséptico", "fungicida", "cicatrizante", "quemaduras", "alteraciones de la piel", "dolor articular","prevencion", "acne", "arbol de te", "aceite de jojoba", "zarzaparilla", "cuidado", "aceite de argan", "colageno hidrolizado", "antiarrugas","cuidado", "natural", "cuida medio ambiente", "aceite de palma", "aceite de coco", "cera de arroz"]
 	},
 
 	"pregunta4":{
 		"text": "¿Sirve para el sol?",
 			"products": ["crema solar SPF 50", "Aceite formato roll-on de rosa mosqueta", "Aceite puro de argan"],
-			"tag": ["prevención", "protege piel", "respeta medio ambiente", "spray", "filtros fisicos","reparacion", "cicatrices", "quemaduras solares", "manchas", "arrugas", "estrias","reparacion", "calmante", "antiinflamatorio", "hidratante", "antiséptico", "fungicida", "cicatrizante", "quemaduras", "alteraciones de la piel", "dolor articular"]
+			"tag": ["prevención", "protege piel", "respeta medio ambiente", "spray", "filtros fisicos","reparacion", "cicatrices", "quemaduras solares", "manchas", "arrugas", "estrias", "calmante", "antiinflamatorio", "hidratante", "antiséptico", "fungicida", "cicatrizante", "quemaduras", "alteraciones de la piel", "dolor articular"]
 	},
 
 	"pregunta5":{
