@@ -19,6 +19,32 @@ const contenthead = {
 	"eot": "application/vnd.ms-fontobject",
 	"sfnt": "application/font-sfnt"
 }
+var list_productos = {}
+var errorToRead = 'Se ha producido un error al intentar leer el archivo.<br>\nEl error es:<br>\n'
+var share_var = {}
+
+function readProducts(s){
+	fs.readFile(`${__dirname}/config/products.json`, 'utf8', (e, d) => {
+		if (e) {
+			try {
+				s.emit('response', errorToRead+e);
+
+			} catch (er) {}
+			return console.log(errorToRead+e)
+		}
+		list_productos = JSON.parse(d);
+		try {
+			s.emit('response', 'Se ha leido el fichero con exíto');
+		} catch (er) {
+			console.log(er)
+		}
+		return console.log('Se ha leido el fichero con exíto')
+	});
+}
+
+readProducts();
+
+
 
 function server(req, res) {
 	var path, toReplace = 'algo es algo...', match = '';
@@ -26,18 +52,22 @@ function server(req, res) {
 	path = __dirname + '/public';
 	path += (req.url === '/') ? '/index.html' : (req.url.split('.').length === 2) ? req.url : req.url + '.html';
 	if (path.search(/computer\d?\.[html]/) !== -1){
-		console.log("entra con el html porque path vale "+ path);
+		//console.log("entra con el html porque path vale "+ path);
 		if (path.search(/\d\./) !== -1) {
-			toReplace = 'computer_questions2';
+			share_var.script = 'computer_questions2';
 			path = path.replace(/\d\./, '.');
 		}
-		else toReplace = 'computer_questions';
+		else share_var.script = 'computer_questions';
 	} else if (path.search('_questions') !== -1){
 		if (path.search(/\d\./) !== -1) {
-			toReplace = 'productos_ropa';
+			share_var.json = 'productos_ropa';
+			share_var.products = 'ropa';
 			path = path.replace(/\d\./, '.');
 		}
-		else toReplace = 'productos_cosmetica';
+		else {
+			share_var.json = 'productos_cosmetica';
+			share_var.products = "['" + list_productos['cosmetica'].join("','") + "']";
+		}
 	}
 
 	fs.readFile(path, 'utf8', function (err, data) {
@@ -57,9 +87,21 @@ function server(req, res) {
 			console.log(`Se esta pidiendo: ${req.url} pero da error`)
 		}
 
-		if(typeof data == 'string')
-			data = data.replace(/[#][{]\w*[}]/, toReplace);
-		else console.log("no lo intentes con "+ path)
+		if(typeof data == 'string'){
+			var newMatch = [], r = '';
+			newMatch = data.match(/[#][{]\w*[}]/g);
+			if (newMatch){
+				for (let i=0; i< newMatch.length;i++){
+					r = newMatch[i].replace('#', '').replace('{', '').replace('}', '');
+					let str =  "#{"+r+"}";
+					data = data.replace(str, share_var[r]);
+				}
+			}
+
+		/*console.log('--------------------------------')*/
+			//data = data.replace(, share_var);
+		}
+		//else console.log("no lo intentes con "+ path)
 		res.end(data);
 	});
 }
@@ -78,11 +120,15 @@ io.on('connection', function (socket) {
 	});
 
 	socket.on('cancel', function(d){
-		socket.broadcast.emit('cancel', d)
+		socket.broadcast.emit('cancel', d);
 	});
 
 	socket.on('is-select', function(d){
-		socket.broadcast.emit('is-select', d)
-
+		socket.broadcast.emit('is-select', d);
 	});
+	socket.on('reloadProducts', function(d){
+		console.log("antes")
+		readProducts(socket);
+	});
+
 });

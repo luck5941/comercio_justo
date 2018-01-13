@@ -3,16 +3,15 @@ class Concurso {
 		this.question = q;
 		this.productos = p;
 		this.winProduct = '';
+		this.products_str = #{products}
 		this.init();
 	}
 	init() {
 		//primero pasamos todos los productos a un array
-		let p = []
-		for (let i in this.productos)
-			p.push(i);
+
+		let n = Math.floor(Math.random() * this.products_str.length);
 		//segundo obetenemos un valor al azar de ese array
-		let n = Math.floor(Math.random() * 10);
-		this.winProduct = p[n];
+		this.winProduct = this.products_str[n];
 		this.print();
 	}
 
@@ -27,6 +26,8 @@ class Concurso {
 			$("#products").html(str);
 			window.questions = $('.question');
 			window.questions_height = parseFloat(questions.css('height'));
+			if ($('.products').length == 1)
+				this.iluminate();
 		}
 	response(selectedQuestion) {
 		/*
@@ -70,8 +71,16 @@ class Concurso {
 				//Si no está en la lista
 				delete this.question[q];
 			}
-
 		this.print();
+	}
+
+	iluminate() {
+		var arg = '';
+		for (let i in this.productos)
+			arg = this.products_str.indexOf(i);
+		$.post("https://api.particle.io/v1/devices/420054000e51353532343635/led?access_token=b3de2a21c1d41a2c96094d7bf7eced5f202ebd03", {"arg": arg}, function(e){console.log(e);});
+		return socket.emit('win', {action: 'win'});
+		window.location.href = 'youwin';
 	}
 
 

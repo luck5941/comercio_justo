@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>_private_</title>
+    </head>
+    <body>
+        <div>
+            <p id="response"></p>
+        </div>
+        <button id="button" type="button" name="button">Update</button>
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript">
+            var button = document.getElementById('button'),
+                response = document.getElementById('response'),
+                socket = io('http://192.168.1.9:8080');
+            button.addEventListener('click', function(){
+                socket.emit('reloadProducts');
+            });
+            socket.on('response', function(d){
+                debugger;
+                response.innerHTML = d;
+            });
+        </script>
+    </body>
+</html>

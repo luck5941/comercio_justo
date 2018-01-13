@@ -8,15 +8,13 @@ socket = io('http://192.168.1.9:8080');
 
 socket.on('news', function (data) {
 	console.log(data);
-
-	return socket.emit('my other event', {
-		my: 'data'
-	});
+	return socket.emit('my other event', {my: 'data'});
 });
 
-socket.emit('my other event', {
-	my: 'data2'
+socket.on('win', function(d){
+	return window.location.href = 'youwin';
 });
+
 
 moveCircle = (obj)=> {
 	var x, y;
