@@ -21,6 +21,8 @@ body section {
     float: left;
     flex-direction: column;
     text-align: center;
+    display: flex;
+    height: 100vh;
 }
 
 body section .question {
@@ -35,7 +37,7 @@ body section .question {
     margin: 5px 0 5px 5px;
     border-radius: 5px;
     font-family: 'Roboto';
-    padding: 10px;
+    padding: 0 10px;
     color: #f9fcd4;
 }
 

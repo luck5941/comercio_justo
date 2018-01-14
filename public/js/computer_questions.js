@@ -25,7 +25,7 @@ class Concurso {
 				str += `<div class="products">${i}</div>`;
 			$("#products").html(str);
 			window.questions = $('.question');
-			window.questions_height = parseFloat(questions.css('height'));
+			window.questions_height = parseFloat(questions.css('height')) + parseFloat(questions.css('margin-top'))*2;
 			if ($('.products').length == 1)
 				this.iluminate();
 		}
@@ -79,8 +79,11 @@ class Concurso {
 		for (let i in this.productos)
 			arg = this.products_str.indexOf(i);
 		$.post("https://api.particle.io/v1/devices/420054000e51353532343635/led?access_token=b3de2a21c1d41a2c96094d7bf7eced5f202ebd03", {"arg": arg}, function(e){console.log(e);});
-		return socket.emit('win', {action: 'win'});
-		window.location.href = 'youwin';
+		socket.emit('win', {action: 'win'});
+		window.setTimeout(function(){
+			return window.location.href = 'youwin';
+		},1000);
+
 	}
 
 
