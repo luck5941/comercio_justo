@@ -21,14 +21,14 @@ Por tanto se necesita, hasta este momento (a nivel de software)
  1. *Creación del proyecto con nodeJS*
  2. *Creación del servidor (o importación del mismo)*
  3. *Comunicación entre ambos clientes*
- 4. Comunicación con la API de photon
+ 4. *Comunicación con la API de photon*
  5. *Desarrollo de la aplicación para*
     	1. *Movil*
 		2. *Ordenador*
-		3. Photon
+		3. *Photon*
  6. Diseño del cliente
-		1. Móvil
-		2. Cliente
+		1. *Móvil*
+		2. *Cliente*
 		3. *Photon (cableado)*
 
 
@@ -41,3 +41,7 @@ Cada producto tiene un array asociado con cada tag o etiqueta
 Cada pregunta tiene asociado un array con todos los productos que pueden cumplir la condición que establezca la pregunta
 
 Al responder, se añade la etiqueta a una lista y se descartan todos los productos que no tengan esta etiqueta y todas las preguntas que no tengan asociado un producto posible.
+
+## Enlace de bitbucks
+
+https://bitbucket.org/luck59_41/comercio_justo
