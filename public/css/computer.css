@@ -1,27 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:500i');
 body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  font-family: Roboto, Helvetica, sans-serif; }
-  body #circle_cursor {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    background-color: #d3ede2
+}
+
+body #circle_cursor {
     width: 25px;
     height: 25px;
     background-color: purple;
     border-radius: 50px;
     position: absolute;
-    z-index: 3; }
-  body section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center; }
-    body section .question {
-      flex-grow: 1;
-      width: 20%;
-      background: lightgray; }
-    body section .question:nth-child(2n) {
-      background-color: blue; }
-    body section .question.hover {
-      color: white; }
+    z-index: 3;
+}
 
-/*# sourceMappingURL=computer.css.map */
+body section {
+    width: 20%;
+    float: left;
+    flex-direction: column;
+    text-align: center;
+}
+
+body section .question {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    float: left;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background: #69ccb9;
+    margin: 5px 0 5px 5px;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    padding: 10px;
+    color: #f9fcd4;
+}
+
+body section .question:nth-child(2n) {
+    background-color: #69ccb9;
+}
+
+body section .question.hover {
+    color: #69ccb9;
+    background-color: white;
+}
+
+#ip {
+    font-family: 'Roboto';
+    color: #69ccb9;
+    font-size: 2em;
+    margin: 10px 0 0 0;
+    width: 70%;
+    float: right;
+    text-align: center;
+}
+
+#products {
+    width: 70%;
+    float: right;
+    text-align: center;
+}
+
+.products {
+    width: 20%;
+    height: 130px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    float: left;
+    background: white;
+    margin: 15px;
+    border: solid 3px #69ccb9;
+    box-shadow: 7px 7px 0 #69ccb9;
+    color: #69ccb9;
+    font-family: 'Roboto';
+}
+
+body section .products:nth-child(2n) {
+    background-color: white;
+}

@@ -1,6 +1,7 @@
-$font: Roboto, Helvetica, sans-serif;
-$color1: chocolate;
-$color2: blue;
+@import url('https://fonts.googleapis.com/css?family=Roboto:500i');
+$font: 'Roboto';
+$color1: #69ccb9;
+$color2: white;
 $radio: 25px;
 body {
 	margin: 0;
@@ -14,8 +15,6 @@ body {
 		border-radius: 50px;
 		position: absolute;
 		z-index: 3;
-		//left: 50%;
-		//top: 50vh;
 	}
 	section {
 		height: 100vh;
@@ -25,13 +24,44 @@ body {
 		.question {
 			flex-grow: 1;
 			width: 20%;
-			background: lightgray;
-		}
-		.question:nth-child(2n){
-			background-color: blue; 
+			background: $color1;
 		}
 		.question.hover {
 			color: white;
+		}
+		.products {
+  			flex-grow: 1;
+  			width: 20%;
+  			background: $color2;
+  		}
+	}
+	#products{
+  		width: 70%;
+  		float: right;
+  		text-align: center;
+  		#ip{
+			font-family: $font;
+			color: $color1;
+			font-size: 2em;
+			margin: 10px 0 0 0;
+			width: 70%;
+			float: right;
+			text-align: center;
+		}
+		.products {
+			width: 20%;
+			height: 130px;
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			flex-direction: column;
+			float: left;
+			background: $color2;
+			margin: 15px;
+			border: solid 3px $color1;
+			box-shadow: 7px 7px 0 $color1;
+			color: $color1;
+			font-family: $font;
 		}
 	}
 }
