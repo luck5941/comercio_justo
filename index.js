@@ -46,6 +46,42 @@ readProducts();
 
 
 
+function readFile(err, data) {
+	if (err) {
+		console.log(`Se esta pidiendo: ${req.url}`)
+		res.writeHead(500, {
+			'Content-Type': 'text/html'
+		});
+		res.end('<h1>Error</h1>' + err);
+	}
+	try {
+		res.writeHead(200, {
+			'Content-Type': contenthead[path.split('.')[path.split('.').length - 1]]
+		});
+	} catch (e) {
+		console.log("El error ha sido: ")
+		console.log(`Se esta pidiendo: ${req.url} pero da error`)
+	}
+
+	if(typeof data == 'string'){
+		var newMatch = [], r = '';
+		newMatch = data.match(/[#][{]\w*[}]/g);
+		if (newMatch){
+			for (let i=0; i< newMatch.length;i++){
+				r = newMatch[i].replace('#', '').replace('{', '').replace('}', '');
+				let str =  "#{"+r+"}";
+				data = data.replace(str, share_var[r]);
+			}
+		}
+
+	/*console.log('--------------------------------')*/
+		//data = data.replace(, share_var);
+	}
+	//else console.log("no lo intentes con "+ path)
+	res.end(data);
+}
+
+
 function server(req, res) {
 	var path, toReplace = 'algo es algo...', match = '';
 
@@ -69,8 +105,7 @@ function server(req, res) {
 			share_var.products = "['" + list_productos['cosmetica'].join("','") + "']";
 		}
 	}
-
-	fs.readFile(path, 'utf8', function (err, data) {
+	function readFile(err, data) {
 		if (err) {
 			console.log(`Se esta pidiendo: ${req.url}`)
 			res.writeHead(500, {
@@ -103,7 +138,18 @@ function server(req, res) {
 		}
 		//else console.log("no lo intentes con "+ path)
 		res.end(data);
-	});
+	}
+
+	if (path.split('.')[1] === 'png' || path.split('.')[1] === 'jpg'){
+		fs.readFile(path, readFile);
+		console.log("No se abre como utf8")
+	}
+	else{
+		fs.readFile(path, 'utf8', readFile);
+		console.log(path.split('.')[1])
+
+	}
+
 }
 
 console.log(`listen on port 8080`)

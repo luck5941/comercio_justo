@@ -95,3 +95,5 @@ $.get('json/#{json}.json', function(d){
 }).fail(function (e) {
 	console.log(e)
 });
+
+$.post("https://api.particle.io/v1/devices/420054000e51353532343635/led?access_token=b3de2a21c1d41a2c96094d7bf7eced5f202ebd03", {"arg": "init"}, function(e){console.log(e);});
